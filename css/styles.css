@@ -1,12 +1,12 @@
 
 @font-face {
-    font-family: "Bitstream Vera Serif Bold";
-    src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+    font-family: "Nougat";
+    src: url("../Brawl Star Font/Brawl-Star/Nougat-ExtraBlack.ttf");
   }
 
 /* Étape 2 */
 body {
-    background-color: rgb(251, 251, 249);
+    background-color: #1E50D5;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: justify;
 }
@@ -67,36 +67,24 @@ section h2 {
 }
 
 nav {
+    background-image: url("../img/fond.png"); ;
     display: block;
     padding: 10px;
     margin: 10px;
 }
 
 nav a {
+    background-color: #edc948 ;
     text-decoration: none;
-    color: white;
+    color: #000000;
     border-radius: 8px;
-    font-size: larger;
+    font-size: 30px;
     padding: 10px 20px;
 }
 
 nav a:hover {
-    background-color: yellowgreen;
-}
-
-nav a:first-child:hover {
-    background-color: aquamarine;
-    color: rgb(213, 51, 78);
-}
-
-nav a:nth-child(2):hover {
-    background-color: rgb(214, 127, 255);
-    color: aqua;
-}
-
-nav a:nth-child(3):hover {
-    background-color: rgb(213, 51, 78);
-    color: yellowgreen;
+    background-color: #b39117;
+    color: #ffffff;
 }
 
 section a {
