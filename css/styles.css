@@ -6,13 +6,12 @@
 
 /* Étape 2 */
 body {
-    background-color: #1E50D5;
+    background-image: url("../img/fond.png");
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: justify;
 }
 
 header, footer {
-    background-image: url("../img/GreenIT_background.jpg");
     padding: 15px;
     text-align: center;
 }
@@ -28,9 +27,9 @@ footer p{
     font-size: 120%;
 
 }
-footer a{
-    color:white;
-    font-size: 120%;
+
+.perso{
+    background-image: url("../img/fond perso.png");
 }
 
 section {
@@ -39,6 +38,7 @@ section {
     padding: 10px;
     text-align: center;
 }
+
 h1, h2, h3{
     font-family: 'Bitstream Vera Serif Bold';
 }
@@ -67,7 +67,6 @@ section h2 {
 }
 
 nav {
-    background-image: url("../img/fond.png"); ;
     display: block;
     padding: 10px;
     margin: 10px;
@@ -93,22 +92,26 @@ section a {
 }
 
 /* Étape 3 */
-#citation, #definition {
+#definition {
     font-size: 20px;
     text-align: center;
     font-style: italic;
     width: 50%;
     margin: auto;
     padding: 10px;
-}
-
-#citation {
-    color: rgb(243, 67, 202);
-}
-
-#definition {
     color : pink;
 }
+
+#perso {
+    font-size: 22   px;
+    text-align: center;
+    font-style:oblique;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+
 
 .postit, .postit-item {
     border-radius: 8px;
@@ -182,11 +185,11 @@ section a {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid #2e7d32; /* Couleur verte */
+    border: 2px solid #edc948; /* Couleur verte */
 }
 
 caption, thead {
-    background-color: #2e7d32; /* Couleur verte */
+    background-color: #edc948; /* Couleur verte */
     color: white;
 }
 
@@ -205,7 +208,7 @@ tbody td, tfoot td {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #ddffe2; /* Couleur de fond gris clair */
+    background-color: #1E50D5; /* Couleur de fond gris clair */
 }
 
 tbody tr:nth-child(even) {
@@ -213,7 +216,7 @@ tbody tr:nth-child(even) {
 }
 
 tfoot tr {
-    background-color: #2e7d32; /* Couleur verte */
+    background-color: #1E50D5; /* Couleur verte */
     color: white;
 }
 
