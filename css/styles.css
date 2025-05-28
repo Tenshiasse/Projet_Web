@@ -304,3 +304,34 @@ main{
     width: 60%;
     padding: 10px;
 }
+
+
+/* Pour les prix star qui tourne */
+
+.main-image-link {
+  position: relative;
+}
+
+
+.logo-icon {
+  position: absolute;
+  top: 50%;
+  width: 100px;        /* taille du petit logo */
+  height: 100px;
+  border-radius: 50%;  /* rond */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Positionnement gauche / droite */
+.logo-icon.left {
+  left: -50px; /* décalage vers l’extérieur, ajustez selon votre visuel */
+}
+.logo-icon.right {
+  right: -50px;
+}
+
+/* Classe ajoutée par JS pour faire tourner */
+.logo-icon.rotating {
+  transform: translateY(-50%) rotate(360deg);
+}

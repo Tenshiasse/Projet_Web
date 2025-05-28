@@ -114,3 +114,23 @@ function submitQuiz() {
       btn.textContent = "Limite atteinte";
     }
   }
+
+  // Pour faire tourner les prix star
+const logoLeft  = document.getElementById('logo-left');
+const logoRight = document.getElementById('logo-right');
+
+
+function addRotateListener(logo) {
+  logo.addEventListener('mouseenter', () => {
+    logo.classList.add('rotating');
+  });
+  
+  logo.addEventListener('mouseleave', () => {
+    
+    logo.classList.remove('rotating');
+  });
+}
+
+// Applique aux deux prix star
+addRotateListener(logoLeft);
+addRotateListener(logoRight);
