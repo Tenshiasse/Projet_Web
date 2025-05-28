@@ -84,13 +84,14 @@ nav a:hover {
 
 
 #definition {
-    font-size: 20px;
+    font-size: 22.5px;
     text-align: center;
     font-style: bold;
     width: 70%;
     margin: auto;
     padding: 5px;
-    color : #b39117;
+    color : #4e2300;
+    
 }
 
 #perso {
@@ -100,6 +101,14 @@ nav a:hover {
     width: 50%;
     margin: auto;
     padding: 10px;
+}
+
+#br {
+background-color: #FDF6DC; /* Jaune doré */
+justify-content: center;
+align-items: center;
+padding: 5%;
+margin-bottom: 5%;
 }
 
 .left {

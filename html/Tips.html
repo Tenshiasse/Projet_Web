@@ -10,15 +10,25 @@
     <body><!-- Début du code de la page web -->
         
         <header>
-            <a href="https://www.greenit.fr/">
-                <img alt="image alt text" src="../img/GreenIT.jpg" height="200" width="400">
+            <a href="https://supercell.com/en/games/brawlstars/" class="main-image-link">
+                <!-- Logo à gauche -->
+                <img src="../img/Prix_star.png" alt="Logo prix star" class="logo-icon left" id="logo-left">
+
+                <!-- Image principale -->
+                <img src="../img/acceuil.png" alt="acceuil_img" class="main-image" width="1000" height="750">
+
+                <!-- Logo à droite -->
+                <img src="../img/Prix_star.png" alt="Logo prix star" class="logo-icon right" id="logo-right">
             </a>
+
             <nav>
                 <a href="./Acceuil.html">Accueil</a>
-                <a href="./GreenITSiteWeb.html">Green IT & sites Web</a>
-                <a href="./QuizGreenIT.html">Quiz Green IT</a>
-            </nav>
+                <a href="./Personnages.html">Personnages</a>
+                <a href="./Tips.html">Tips et Astuces</a>
+                <a href="./apropos.html">À propos</a>
+            </nav>  
         </header>
+        
         <form method="post" name="Quiz" action="#" class="box" id="QuizId" onsubmit="return false">            
             <fieldset id="informations">
                 <input type="button" value="Commencer le quiz" class="quiz-start bouton-style" onclick="quizAlert()" />
@@ -111,7 +121,8 @@
         <footer>
             <p>©️2025 Berly & Dollez--Loffreda.</p>
             <p>Tous droits réservés.</p>
-            <a href="https://www.efrei.fr/"> En savoir plus ? </a>
+            <p><a href="https://www.efrei.fr/"> En savoir plus ? </a></p>
+            <a href="./apropos.html">À propos</a>
         </footer>
             
     </body>
