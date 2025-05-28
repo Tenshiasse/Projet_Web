@@ -310,28 +310,31 @@ main{
 
 .main-image-link {
   position: relative;
+  display: inline-block;
 }
 
-
-.logo-icon {
+/* étoiles “Prix star” */
+.star-icon {
   position: absolute;
   top: 50%;
-  width: 100px;        /* taille du petit logo */
-  height: 100px;
-  border-radius: 50%;  /* rond */
+  height: 72%;
+  width: 25%;  
   transform: translateY(-50%);
+  transition: transform 0.6s ease;
   cursor: pointer;
 }
 
-/* Positionnement gauche / droite */
-.logo-icon.left {
-  left: -50px; /* décalage vers l’extérieur, ajustez selon votre visuel */
-}
-.logo-icon.right {
-  right: -50px;
+/* étoile de gauche */
+#star-left {
+  left: 0%; 
 }
 
-/* Classe ajoutée par JS pour faire tourner */
-.logo-icon.rotating {
+/* étoile de droite */
+#star-right {
+  right: 0%;
+}
+
+/* Pour la rotation à 360° */
+.star-icon.rotating {
   transform: translateY(-50%) rotate(360deg);
 }

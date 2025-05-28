@@ -115,22 +115,22 @@ function submitQuiz() {
     }
   }
 
-  // Pour faire tourner les prix star
-const logoLeft  = document.getElementById('logo-left');
-const logoRight = document.getElementById('logo-right');
+// Pour faire tourner les prix star
 
+const starLeft  = document.getElementById('star-left');
+const starRight = document.getElementById('star-right');
 
-function addRotateListener(logo) {
-  logo.addEventListener('mouseenter', () => {
-    logo.classList.add('rotating');
+// fonction générique pour démarrer/arrêter la rotation
+function attachRotation(starr) {
+  starr.addEventListener('mouseenter', () => {
+    starr.classList.add('rotating');
   });
-  
-  logo.addEventListener('mouseleave', () => {
-    
-    logo.classList.remove('rotating');
+  starr.addEventListener('mouseleave', () => {
+    // on retire la classe pour pouvoir relancer l'animation au prochain survol
+    starr.classList.remove('rotating');
   });
 }
 
-// Applique aux deux prix star
-addRotateListener(logoLeft);
-addRotateListener(logoRight);
+// on applique aux deux étoiles
+attachRotation(starLeft);
+attachRotation(starRight);
