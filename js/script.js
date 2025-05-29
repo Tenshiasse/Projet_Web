@@ -4,116 +4,31 @@ function quizAlert() {
     quizConfirm();
   }
   
-  function quizConfirm() {
-    const infos = document.querySelectorAll('#informations input, #informations select, #informations textarea');
-    const allFilled = Array.from(infos).every(el => el.value.trim() !== '');
-    if (!allFilled) {
-      alert("Veuillez remplir tous les champs !");
-      return;
-    }
-  
-    const res = confirm("Êtes-vous sûr de vouloir continuer ?");
-    if (!res) {
-      alert("Vous allez être redirigé vers la page d'accueil !");
-      window.location.href = "accueil.html";
-      return;
-    }
-  
-    alert("Le quiz va commencer dans 5 secondes !");
-  
-    infos.forEach(el => el.disabled = true);
-    document.querySelector('.quiz-start').style.display = 'none';
-  
-    let timer = 5;
-    const confirmation = document.createElement("p");
-    confirmation.textContent = `${timer} secondes`;
-    confirmation.style.cssText = `
-      color: red; font-size: 1.5em; font-weight: bold;
-      text-align: center; margin-top: 1em;
-    `;
-    document.getElementById("informations").appendChild(confirmation);
-  
-    const interval = setInterval(() => {
-      timer--;
-      confirmation.textContent = `${timer} secondes`;
-      console.log(timer);
-  
-      if (timer === 0) {
-        clearInterval(interval);
-        confirmation.textContent = "C'est parti ! Bonne chance !";
-        document.querySelectorAll(".quiz").forEach(el => el.style.display = "block");
-      }
-    }, 1000);
-  }
-  
-console.log("Script quiz chargé avec succès !");
+  const scores = { Shelly: 0, Colt: 0, Nita: 0, Dynamike: 0, Bull: 0, Brock: 0, Bo: 0, Jessie: 0 };
 
-let essais = 0; 
+const mapping = {
+  q1: { midrange: ['Shelly','Colt','Brock'], long: ['Colt','Brock','Bo'], close: ['Bull','Nita'], explosion: ['Dynamike'] },
+  q2: { direct: ['Shelly','Colt','Bull'], zone: ['Dynamike','Nita','Bo','Brock'] },
+  q3: { team: ['Nita','Bo'], solo: ['Colt','Bull','Brock'] },
+  q4: { high: ['Bull','Colt'], low: ['Shelly','Nita','Dynamike','Brock','Bo'] },
+  q5: { burst: ['Shelly','Bull'], contrôle: ['Dynamike','Nita','Bo'], projectiles: ['Colt','Brock'] },
+  q6: { '16': ['Shelly','Colt'], '15': ['Nita','Bo'], '3': ['Bull'], '9': ['Jessie'], '11': ['Dynamike'], '7': ['Brock'] }
+};
 
-function submitQuiz() {
-  let score = 0;
-  essais++;
+document.getElementById('submitBtn').addEventListener('click', calculateResult);
 
-  // Q1 
-  const q1 = document.querySelector('input[name="q1"]:checked');
-  if (q1 && q1.value === "Une pratique visant à réduire l'impact environnemental des technologies de l'information.") {
-    score += 4;
-  }
-
-  // Q2 
-  const q2checked = Array.from(document.querySelectorAll('input[name="q2"]:checked'));
-  q2checked.forEach(cb => {
-    if (cb.value === "Réduire la consommation d'énergie" ||
-        cb.value === "Minimiser les déchets électroniques") {
-      score += 3;
-    } else {
-      score -= 3;
-    }
+function calculateResult() {
+  Object.keys(scores).forEach(b => scores[b] = 0);
+  const form = document.getElementById('quizForm');
+  Object.keys(mapping).forEach(q => {
+    const choice = form.elements[q]?.value;
+    if (mapping[q][choice]) mapping[q][choice].forEach(b => scores[b]++);
   });
-
-  // Q3 
-  const re = /\b(réduire|alléger|faciliter|optimiser|exploiter)\b/i;
-  const q3text = document.querySelector('textarea[name="q3"]').value;
-  if (re.test(q3text)) {
-    score += 10;
-  }
-
-  // === début de la partie corrigée d’insertion ===
-    // Récupère le tableau et son <tbody>, ou le crée s’il n’existe pas
-    const table = document.getElementById('result');
-    let tbody = table.querySelector('tbody');
-    if (!tbody) {
-      tbody = document.createElement('tbody');
-      table.appendChild(tbody);
-    }
-  
-    // Crée une nouvelle ligne et deux cellules
-    const row = tbody.insertRow();
-    const cellEssai = row.insertCell(0);
-    const cellScore = row.insertCell(1);
-  
-    // Remplit les cellules
-    cellEssai.textContent = essais;
-    cellScore.textContent = score;
-    // === fin de la partie corrigée d’insertion ===
-  
-    
-    submitQuiz();
+  const best = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+  document.getElementById('result').innerHTML = `<p>Votre brawler idéal est <strong>${best}</strong> !</p>`;
 }
 
-function resetQuiz() {
-    document.getElementById('QuizId').reset(); 
-  }
-function submitQuiz() {
-  
-    resetQuiz();
-  
-    if (essais >= 3) {
-      const btn = document.querySelector('button[onclick="submitQuiz()"]');
-      btn.disabled = true;
-      btn.textContent = "Limite atteinte";
-    }
-  }
+
 
 // Pour faire tourner les prix star
 
