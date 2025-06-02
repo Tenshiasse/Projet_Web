@@ -20,14 +20,20 @@ document.getElementById('submitBtn').addEventListener('click', calculateResult);
 function calculateResult() {
   Object.keys(scores).forEach(b => scores[b] = 0);
   const form = document.getElementById('quizForm');
-  Object.keys(mapping).forEach(q => {
-    const choice = form.elements[q]?.value;
-    if (mapping[q][choice]) mapping[q][choice].forEach(b => scores[b]++);
-  });
-  const best = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
-  document.getElementById('result').innerHTML = `<p>Votre brawler idéal est <strong>${best}</strong> !</p>`;
-}
 
+  for (let q of Object.keys(mapping)) {
+    const choice = form.elements[q]?.value;
+    if (!choice) {
+      alert("Merci de répondre à toutes les questions !");
+      return;
+    }
+    mapping[q][choice].forEach(b => scores[b]++);
+  }
+
+  const best = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+  document.getElementById('result').innerHTML =
+    `<p>Votre brawler idéal est <strong>${best}</strong> !</p>`;
+}
 
 
 // Pour faire tourner les prix star
