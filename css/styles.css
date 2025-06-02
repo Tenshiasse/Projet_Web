@@ -1,187 +1,207 @@
-
+ 
 @font-face {
-    font-family: "Nougat";
-    src: url("../Brawl Star Font/Brawl-Star/Nougat-ExtraBlack.ttf");
+  font-family: "Nougat";
+  src: url("../Brawl Star Font/Brawl-Star/Nougat-ExtraBlack.ttf");
 }
 
 body {
-    background-image: url("../img/fond.png");
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    justify-content: justify;
+  background-image: url("../img/fond.png");
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  
+  margin: 0;
+  padding: 0;
 }
 
-header, footer {
-    padding: 15px;
-    text-align: center;
+header,
+footer {
+  padding: 15px;
+  text-align: center;
 }
 
 header img {
-    border-radius: 8px;
-    height: 20%;
-    width: 40%;
+  border-radius: 8px;
+  height: 20%;
+  width: 40%;
 }
 
-footer p{
-    color: white;
-    font-size: 120%;
-
+footer p {
+  color: white;
+  font-size: 120%;
 }
 
+/* Pour les larges marges horizontales */
 section {
-    margin: 20px 20% 20px 20%;
-    background-color: #f2f2f2;
-    padding: 40px;
-    text-align: center;
-    border-radius: 20px;
+  margin: 20px 20% 20px 20%;
+  background-color: #f2f2f2;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
 }
 
-h1, h2, h3{
-    font-family: 'Bitstream Vera Serif Bold';
+h1,
+h2,
+h3 {
+  font-family: "Bitstream Vera Serif Bold";
 }
+
 section h1 {
-    color: black;
-    text-align: center;
-    font-size: 250%;
+  color: black;
+  text-align: center;
+  font-size: 250%;
 }
-section ol, section ul{
-    display: inline-block;
-    text-align: left;
+
+section ol,
+section ul {
+  display: inline-block;
+  text-align: left;
 }
 
 section a:hover {
-    color: rgb(0, 0, 0);
-    background-color: #ffc800;
-    border-radius: 8px;
+  color: rgb(0, 0, 0);
+  background-color: #ffc800;
+  border-radius: 8px;
 }
 
 h2 ~ h3 {
-    color: rgb(0, 0, 0);
-    text-align: left;
+  color: rgb(0, 0, 0);
+  text-align: left;
 }
 
 section h2 {
-    color: #4CAF50;
+  color: #2e7761;
 }
 
 nav {
-    display: block;
-    padding: 10px;
-    margin: 10px;
+  display: block;
+  padding: 10px;
+  margin: 10px;
 }
 
 nav a {
-    background-color: #edc948 ;
-    text-decoration: none;
-    color: #000000;
-    border-radius: 8px;
-    font-size: 30px;
-    padding: 10px 20px;
+  background-color: #edc948;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 8px;
+  font-size: 30px;
+  padding: 10px 20px;
+  margin: 5px;
+  display: inline-block;
 }
+
 nav a:hover {
-    background-color: #b39117;
-    color: #ffffff;
+  background-color: #b39117;
+  color: #ffffff;
 }
 
-
+/* ID spécifiques */
 #definition {
-    font-size: 22.5px;
-    text-align: center;
-    font-style: bold;
-    width: 70%;
-    margin: auto;
-    padding: 5px;
-    color : #4e2300;
-    
+  font-size: 22.5px;
+  text-align: center;
+  font-style: bold;
+  width: 70%;
+  margin: auto;
+  padding: 5px;
+  color: #4e2300;
 }
 
 #perso {
-    font-size: 22   px;
-    text-align: center;
-    font-style:oblique;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-style: oblique;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
 }
 
 #br {
-background-color: #FDF6DC; /* Jaune doré */
-justify-content: center;
-align-items: center;
-padding: 5%;
-margin-bottom: 5%;
+  background-color: #fdf6dc; 
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  margin-bottom: 5%;
 }
 
 .left {
-background-color: #FFD700; /* Jaune doré */
-flex: 1;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: #ffd700; 
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .left img {
-max-width: 80%;
-height: auto;
+  max-width: 80%;
+  height: auto;
 }
 
 .right {
-background-color: #FDF6DC; /* Beige clair */
-flex: 2;
-padding: 40px;
-box-sizing: border-box;
-color: #333;
+  background-color: #fdf6dc; 
+  flex: 2;
+  padding: 40px;
+  box-sizing: border-box;
+  color: #333;
 }
 
 .right h1 {
-margin-top: 0;
+  margin-top: 0;
 }
 
 .right p {
-line-height: 1.6;
+  line-height: 1.6;
 }
-
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #edc948; /* Couleur verte */
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #edc948; 
 }
-caption, thead {
-    background-color: #edc948; /* Couleur verte */
-    color: white;
+
+caption,
+thead {
+  background-color: #edc948; 
+  color: white;
 }
+
 caption {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
+
 thead th {
-    padding: 10px;
+  padding: 10px;
 }
-tbody td, tfoot td {
-    padding: 10px;
+
+tbody td,
+tfoot td {
+  padding: 10px;
 }
+
 tbody tr:nth-child(odd) {
-    background-color: #ffffff; /* Couleur de fond gris clair */
+  background-color: #ffffff;
 }
+
 tbody tr:nth-child(even) {
-    background-color: #f9eeee; /* Couleur de fond gris clair */
+  background-color: #f9eeee;
 }
-tbody tr td:hover{
-    background-color: #1E50D5;
-    color: #edc948;
+
+tbody tr td:hover {
+  background-color: #1e50d5;
+  color: #edc948;
 }
+
 tfoot tr {
-    background-color: #1E50D5; /* Couleur verte */
-    color: white;
+  background-color: #1e50d5; 
+  color: white;
 }
 
-
-main{
-    margin: 30px auto 30px auto;
-    border: 2px solid green;
-    border-radius: 8px;
-    width: 60%;
-    padding: 10px;
+main {
+  margin: 30px auto 30px auto;
+  border: 2px solid green;
+  border-radius: 8px;
+  width: 60%;
+  padding: 10px;
 }
 
 form {
@@ -199,7 +219,7 @@ form {
 
 .question p {
   font-weight: bold;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   color: #212529;
   text-align: left;
 }
@@ -235,50 +255,42 @@ button:hover {
   margin-top: 1.5rem;
 }
 
-
-
-/* Pour les prix star qui tourne */
-
+/* Pour les étoiles “Prix star” */
 .main-image-link {
   position: relative;
   display: inline-block;
 }
 
-/* étoiles “Prix star” */
 .star-icon {
   position: absolute;
   top: 50%;
   height: 72%;
-  width: 25%;  
+  width: 25%;
   transform: translateY(-50%);
   transition: transform 0.6s ease;
   cursor: pointer;
 }
 
-/* étoile de gauche */
 #star-left {
-  left: 0%; 
+  left: 0%;
 }
 
-/* étoile de droite */
 #star-right {
   right: 0%;
 }
 
-/* Pour la rotation à 360° */
 .star-icon.rotating {
   transform: translateY(-50%) rotate(360deg);
 }
 
-
-/* fleche */
+/* Bouton "Retour en haut" */
 #scrollTopBtn {
   display: none;
   position: fixed;
   bottom: 20px;
   left: 20px;
   z-index: 99;
-  background-color: #ffc107; 
+  background-color: #ffc107;
   border: none;
   padding: 10px;
   border-radius: 50%;
@@ -300,15 +312,12 @@ button:hover {
 }
 
 
-
-
 /* Espace entre sections et titres */
 .tips-astuces h1,
 .brawler-section,
 .modes-section {
   margin-bottom: 40px;
 }
-
 
 
 /* Couleur de fond pour la liste des modes */
@@ -319,21 +328,137 @@ button:hover {
   margin-bottom: 20px;
 }
 
-
-
-/* Séparation et styles pour chaque mode de jeu dans la section modes */
+/* Séparation et styles des modes de la section modes */
 .mode-box {
-  background-color: #eff1a2; /* Exemple : rose très clair */
+  background-color: #eff1a2; /* Jaune clair */
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
 }
 
-
-/* Ajustement global des paragraphes et titres */
+/* Ajustement des paragraphes et titres */
 p {
   margin-bottom: 10px;
 }
 
 
+@media screen and (max-width: 600px) {
+  /* Pour upprimer ou réduire largeurs/marges qui change pas */
+  section {
+    margin: 15px 5% 15px 5%;
+    padding: 20px;
+    border-radius: 12px;
+  }
 
+  /* En-tête et images : pour ajuster la taille */
+  header img.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* Pour que les étoiles soient moins grosses sur version téléphone */
+  .star-icon {
+    display: none;
+  }
+
+  /* Menu de navigation empiler les liens */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px 0;
+  }
+  nav a {
+    font-size: 18px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* la Tailles de titres réduites */
+  h1 {
+    font-size: 180%;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  h3 {
+    font-size: 120%;
+  }
+
+
+  p,
+  #definition,
+  #perso {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* pour que le tableau soient bien présenter*/
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  /* pour le bouton qui monte*/
+  #scrollTopBtn {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  /* pour les tips et Astuces*/
+  .mode-box {
+    padding: 12px;
+  }
+  .mode-box h3 {
+    font-size: 120%;
+  }
+  .mode-box p,
+  .mode-box ul li {
+    font-size: 14px;
+  }
+
+  /*pour le formulaire */
+  form {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  .question label {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  
+  #definition {
+    width: 90%;
+    font-size: 18px;
+  }
+  #perso {
+    width: 90%;
+    font-size: 18px;
+  }
+  #br {
+    padding: 10%;
+  }
+
+  
+  .left,
+  .right {
+    flex: 1;
+    margin: 0;
+    padding: 10px;
+  }
+  .left img {
+    max-width: 100%;
+  }
+}
