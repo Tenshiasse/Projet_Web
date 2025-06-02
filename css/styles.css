@@ -269,3 +269,27 @@ button:hover {
 .star-icon.rotating {
   transform: translateY(-50%) rotate(360deg);
 }
+
+
+/* fleche */
+#scrollTopBtn {
+  display: none; /* invisible au départ */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 24px;
+  background-color: #ffc107; 
+  color: black;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #ffca28;
+}

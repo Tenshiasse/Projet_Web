@@ -6,7 +6,7 @@
         <meta name="description" content="Brawl's Web - Tips & Astuces">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel= "stylesheet" href="../css/styles.css">
-        <script type="text/javascript" src="../js/script.js"></script>
+        <script type="text/javascript" src="../js/script.js" defer></script>
     </head><!-- Fin de la balise d'entête -->
     <body><!-- Début du code de la page web -->
         
@@ -30,68 +30,70 @@
             <h1>Quiz Brawl Stars</h1>
             <h2>Quel brawler vous correspond ?</h2>
             <form id="quizForm">
-    <div class="question" data-question-id="1">
-      <p>1. Quel style de combat préférez-vous ?</p>
-      <label><input type="radio" name="q1" value="midrange"> Milieu de portée </label>
-      <label><input type="radio" name="q1" value="long"> Longue portée </label>
-      <label><input type="radio" name="q1" value="close"> Corps à corps </label>
-      <label><input type="radio" name="q1" value="explosion"> Explosion/zone </label>
-    </div>
+          <div class="question" data-question-id="1">
+            <p>1. Quel style de combat préférez-vous ?</p>
+            <label><input type="radio" name="q1" value="midrange"> Milieu de portée </label>
+            <label><input type="radio" name="q1" value="long"> Longue portée </label>
+            <label><input type="radio" name="q1" value="close"> Corps à corps </label>
+            <label><input type="radio" name="q1" value="explosion"> Explosion/zone </label>
+          </div>
 
-    <div class="question" data-question-id="2">
-      <p>2. Préférez-vous infliger des dégâts directs ou de zone ?</p>
-      <label><input type="radio" name="q2" value="direct"> Direct </label>
-      <label><input type="radio" name="q2" value="zone"> Zone </label>
-    </div>
+          <div class="question" data-question-id="2">
+            <p>2. Préférez-vous infliger des dégâts directs ou de zone ?</p>
+            <label><input type="radio" name="q2" value="direct"> Direct </label>
+            <label><input type="radio" name="q2" value="zone"> Zone </label>
+          </div>
 
-    <div class="question" data-question-id="3">
-      <p>3. Aimez-vous aider votre équipe ou jouer en solo ?</p>
-      <label><input type="radio" name="q3" value="team"> Soutien d'équipe </label>
-      <label><input type="radio" name="q3" value="solo"> Duel/soliste </label>
-    </div>
+          <div class="question" data-question-id="3">
+            <p>3. Aimez-vous aider votre équipe ou jouer en solo ?</p>
+            <label><input type="radio" name="q3" value="team"> Soutien d'équipe </label>
+            <label><input type="radio" name="q3" value="solo"> Duel/soliste </label>
+          </div>
 
-    <div class="question" data-question-id="4">
-      <p>4. Quelle mobilité recherchez-vous ?</p>
-      <label><input type="radio" name="q4" value="high"> Élevée </label>
-      <label><input type="radio" name="q4" value="low"> Faible </label>
-    </div>
+          <div class="question" data-question-id="4">
+            <p>4. Quelle mobilité recherchez-vous ?</p>
+            <label><input type="radio" name="q4" value="high"> Élevée </label>
+            <label><input type="radio" name="q4" value="low"> Faible </label>
+          </div>
 
-    <div class="question" data-question-id="5">
-      <p>5. Préfériez-vous un super capable de ... ?</p>
-      <label><input type="radio" name="q5" value="burst"> Burst instantané </label>
-      <label><input type="radio" name="q5" value="contrôle"> Contrôle de zone </label>
-      <label><input type="radio" name="q5" value="projectiles"> Projectiles rapides </label>
-    </div>
+          <div class="question" data-question-id="5">
+            <p>5. Préfériez-vous un super capable de ... ?</p>
+            <label><input type="radio" name="q5" value="burst"> Burst instantané </label>
+            <label><input type="radio" name="q5" value="contrôle"> Contrôle de zone </label>
+            <label><input type="radio" name="q5" value="projectiles"> Projectiles rapides </label>
+          </div>
 
 
-    <div class="question" data-question-id="6">
-      <p>6. Quel Objectif de Développement Durable (ODD) vous attire le plus ?</p>
-      <label><input type="radio" name="q6" value="16"> ODD 16 </label>
-      <label><input type="radio" name="q6" value="15"> ODD 15 </label>
-      <label><input type="radio" name="q6" value="3"> ODD 3 </label>
-      <label><input type="radio" name="q6" value="9"> ODD 9 </label>
-      <label><input type="radio" name="q6" value="11"> ODD 11 </label>
-      <label><input type="radio" name="q6" value="7"> ODD 7 </label>
-    </div>
+          <div class="question" data-question-id="6">
+            <p>6. Quel Objectif de Développement Durable (ODD) vous attire le plus ?</p>
+            <label><input type="radio" name="q6" value="16"> ODD 16 </label>
+            <label><input type="radio" name="q6" value="15"> ODD 15 </label>
+            <label><input type="radio" name="q6" value="3"> ODD 3 </label>
+            <label><input type="radio" name="q6" value="9"> ODD 9 </label>
+            <label><input type="radio" name="q6" value="11"> ODD 11 </label>
+            <label><input type="radio" name="q6" value="7"> ODD 7 </label>
+          </div>
 
-    <button type="button" id="submitBtn">Voir mon brawler !</button>
-    <button id="resetBtn" type="button" style="margin-top: 10px;">Recommencer le quiz</button>
-    
+          <button type="button" id="submitBtn">Voir mon brawler !</button>
+          <button id="resetBtn" type="button" style="margin-top: 10px;">Recommencer le quiz</button>
+          
 
-  </form>
+        </form>
 
-  <div id="result"></div>
-  <script src="script.js"></script>
-        </section>
+        <div id="result"></div>
         
-</body>
+        <button id="scrollTopBtn" title="Retour en haut">⬆️</button>
 
-        <footer>
+        </section>
+  <footer>
             <p>©️2025 Berly & Dollez--Loffreda.</p>
             <p>Tous droits réservés.</p>
             <p><a href="https://www.efrei.fr/"> En savoir plus ? </a></p>
             <a href="./apropos.html">À propos</a>
-        </footer>
+  </footer>
+
+</body>
+
+        
             
-    </body>
 </html>

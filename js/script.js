@@ -101,3 +101,20 @@ if (resetBtn) {
   attachRotation(starLeft);
   attachRotation(starRight);
 });
+
+// Flèche "Retour en haut"
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+// Affiche ou cache la flèche selon le scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    scrollTopBtn.style.display = 'block';
+  } else {
+    scrollTopBtn.style.display = 'none';
+  }
+});
+
+// Quand on clique sur la flèche
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
