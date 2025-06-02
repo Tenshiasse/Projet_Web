@@ -40,6 +40,50 @@ document.addEventListener('DOMContentLoaded', () => {
       `<p>Votre brawler idéal est <strong>${best}</strong> !</p>`;
   }
 
+  function displayResult(brawler) {
+  const link = `./${brawler.toLowerCase()}.html`;
+  const img = `../img/${brawler.toLowerCase()}.jpg`;
+
+  document.getElementById('result').innerHTML = `
+    <p>Votre brawler idéal est <strong>${brawler}</strong> !</p>
+    <a href="${link}">
+      <img src="${img}" alt="${brawler}" width="100" height="100">
+    </a>
+  `;
+}
+
+// === Modifier calculateResult pour utiliser displayResult ===
+function calculateResult() {
+  Object.keys(scores).forEach(b => scores[b] = 0);
+  const form = document.getElementById('quizForm');
+
+  for (let q of Object.keys(mapping)) {
+    const choice = form.elements[q]?.value;
+    if (!choice) {
+      alert("Merci de répondre à toutes les questions !");
+      return;
+    }
+    mapping[q][choice].forEach(b => scores[b]++);
+  }
+
+  const best = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+  displayResult(best);
+}
+
+// === Ajouter comportement pour le bouton reset ===
+const resetBtn = document.getElementById('resetBtn');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    const form = document.getElementById('quizForm');
+    form.reset(); // réinitialise toutes les cases
+    document.getElementById('result').innerHTML = ''; // vide le résultat
+
+    // scroll en haut du quiz
+    form.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+
   // Pour faire tourner les prix star
   const starLeft  = document.getElementById('star-left');
   const starRight = document.getElementById('star-right');
